@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/samplescene.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/Scene1.unity
+    guid: 9f0c493656eddfa439ebb4b46a8a41a7
+  - enabled: 1
+    path: Assets/Scenes/Rotate.unity
+    guid: c552e3769e210a5489f3a2ba519ec398
+  m_configObjects: {}
