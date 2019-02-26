@@ -10886,6 +10886,7 @@ GameObject:
   - component: {fileID: 924132935}
   - component: {fileID: 924132934}
   - component: {fileID: 924132932}
+  - component: {fileID: 924132941}
   - component: {fileID: 924132936}
   - component: {fileID: 924132937}
   - component: {fileID: 924132938}
@@ -11031,11 +11032,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54540b822d2617b4091626c519af1f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   damage:
-    baseValue: 0
+    baseValue: 1
   armor:
     baseValue: 0
+--- !u!114 &924132941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924132931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0bcf005ed879e4d9c0d8d644925558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!224 &1041921853 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9209372104687857793, guid: fc26526cf3657d949962471a9501d798,
@@ -11818,6 +11833,7 @@ GameObject:
   - component: {fileID: 1329379604}
   - component: {fileID: 1329379600}
   - component: {fileID: 1329379603}
+  - component: {fileID: 1329379607}
   - component: {fileID: 1329379602}
   - component: {fileID: 1329379605}
   - component: {fileID: 1329379606}
@@ -11939,6 +11955,20 @@ MonoBehaviour:
     baseValue: 2
   armor:
     baseValue: 1
+--- !u!114 &1329379607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329379599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0bcf005ed879e4d9c0d8d644925558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1001 &1356626225
 PrefabInstance:
   m_ObjectHideFlags: 0
