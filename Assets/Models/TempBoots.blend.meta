@@ -1,24 +1,16 @@
 fileFormatVersion: 2
-guid: a1541fa9449a8ae40a4426bd942c9783
+guid: 8f83eb853b3419043b940512b33b4a2e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cylinder_002
-    100004: Sphere_003
     400000: //RootNode
-    400002: Cylinder_002
-    400004: Sphere_003
-    2100000: unnamed
-    2300000: Cylinder_002
-    2300002: Sphere_003
-    3300000: Cylinder_002
-    3300002: Sphere_003
-    4300000: Sphere_003
-    4300002: Cylinder_002
+    2100000: Material
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -59,7 +51,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -96,10 +88,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

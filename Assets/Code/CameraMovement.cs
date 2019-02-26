@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject target;
+    public Transform target;
 
-    public Vector3 targetCamPos;
+    public Vector3 offset;
+    public float zoomSpeed = 4f;
+    public float minZoom = 5f;
+    public float maxZoom = 15f;
 
-    public float lerpSpeed;
+    public float pitch = 2f;
+
+    public float yawSpeed = 100f;
     
-    // Update is called once per frame
+    private float currentZoom = 10f;
+    private float currentYaw = 0f;
+    
     void Update()
     {
-        //transform.position = target.transform.position + targetCamPos;
+        currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+        currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
 
-        transform.position = Vector3.Lerp(transform.position, target.transform.position + targetCamPos, lerpSpeed + Time.deltaTime);
+        currentYaw -= Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime;
+    }
+
+    void LateUpdate()
+    {
+        transform.position = target.position - offset * currentZoom;
+        transform.LookAt(target.position + Vector3.up * pitch);
+
+        transform.RotateAround(target.position, Vector3.up, currentYaw);
     }
 }

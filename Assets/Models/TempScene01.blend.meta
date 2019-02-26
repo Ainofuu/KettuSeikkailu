@@ -1,24 +1,29 @@
 fileFormatVersion: 2
-guid: a1541fa9449a8ae40a4426bd942c9783
+guid: 19d3cc9a65b187e479351ce631230f63
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cylinder_002
-    100004: Sphere_003
-    400000: //RootNode
-    400002: Cylinder_002
-    400004: Sphere_003
+    100000: Bridge
+    100002: Land
+    100004: //RootNode
+    100006: Water
+    400000: Bridge
+    400002: Land
+    400004: //RootNode
+    400006: Water
     2100000: unnamed
-    2300000: Cylinder_002
-    2300002: Sphere_003
-    3300000: Cylinder_002
-    3300002: Sphere_003
-    4300000: Sphere_003
-    4300002: Cylinder_002
+    2100002: Material
+    2300000: Bridge
+    2300002: Land
+    2300004: Water
+    3300000: Bridge
+    3300002: Land
+    3300004: Water
+    4300000: Water
+    4300002: Bridge
+    4300004: Land
     7400000: Default Take
     9500000: //RootNode
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -96,10 +101,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
