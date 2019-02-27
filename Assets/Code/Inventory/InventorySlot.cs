@@ -44,6 +44,7 @@ public class InventorySlot : MonoBehaviour
     public void OnCombineButton()
     {
         CombineManager.instance.SetItem(item);
+        dropMenu.SetActive(false);
     }
 
     public void OnClickItemSlot()
