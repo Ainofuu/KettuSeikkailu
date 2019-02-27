@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
     public Image icon;
-    public Button removeButton;
     public GameObject dropMenu;
+    public GameObject namePopup;
 
     Item item;
 
@@ -15,7 +16,6 @@ public class InventorySlot : MonoBehaviour
 
         icon.sprite = item.icon;
         icon.enabled = true;
-        removeButton.interactable = true;
     }
 
     public void ClearSlot()
@@ -24,7 +24,6 @@ public class InventorySlot : MonoBehaviour
 
         icon.sprite = null;
         icon.enabled = false;
-        removeButton.interactable = false;
     }
 
     public void OnRemoveButton()
@@ -42,11 +41,33 @@ public class InventorySlot : MonoBehaviour
         }
     }
 
+    public void OnCombineButton()
+    {
+        CombineManager.instance.SetItem(item);
+    }
+
     public void OnClickItemSlot()
     {
         if (item != null && !dropMenu.activeSelf)
             dropMenu.SetActive(true);
         else if (item != null && dropMenu.activeSelf)
             dropMenu.SetActive(false);
+    }
+
+    public void OnMouseEnterInvSlot()
+    {
+        if (item == null)
+            return;
+
+        namePopup.SetActive(true);
+        namePopup.GetComponentInChildren<TextMeshProUGUI>().text = item.name;
+    }
+
+    public void OnMouseExitInvSlot()
+    {
+        if (item == null)
+            return;
+
+        namePopup.SetActive(false);
     }
 }
