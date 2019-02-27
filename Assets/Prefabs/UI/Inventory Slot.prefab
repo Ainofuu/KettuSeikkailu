@@ -117,7 +117,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1058973219768154875}
-        m_MethodName: UseItem
+        m_MethodName: OnClickItemSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9209372104294782572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 9209372104294782574}
   m_OnClick:
     m_PersistentCalls:
@@ -383,3 +383,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 9209372104671561019}
   removeButton: {fileID: 9209372104294782573}
+  dropMenu: {fileID: 0}

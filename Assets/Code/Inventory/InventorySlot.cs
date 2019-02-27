@@ -5,6 +5,7 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton;
+    public GameObject dropMenu;
 
     Item item;
 
@@ -29,6 +30,7 @@ public class InventorySlot : MonoBehaviour
     public void OnRemoveButton()
     {
         Inventory.instance.Remove(item);
+        dropMenu.SetActive(false);
     }
 
     public void UseItem()
@@ -36,6 +38,15 @@ public class InventorySlot : MonoBehaviour
         if (item != null)
         {
             item.Use();
+            dropMenu.SetActive(false);
         }
+    }
+
+    public void OnClickItemSlot()
+    {
+        if (item != null && !dropMenu.activeSelf)
+            dropMenu.SetActive(true);
+        else if (item != null && dropMenu.activeSelf)
+            dropMenu.SetActive(false);
     }
 }
