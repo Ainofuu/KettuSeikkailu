@@ -87,4 +87,14 @@ public class EquipmentManager : MonoBehaviour
             UnequipAll();
         }
     }
+
+    public Equipment GetCurrentEquipment(EquipmentSlot equipmentSlot)
+    {
+        return currentEquipment[(int)equipmentSlot];
+    }
+
+    public Equipment[] GetCurrentEquipment()
+    {
+        return currentEquipment;
+    }
 }

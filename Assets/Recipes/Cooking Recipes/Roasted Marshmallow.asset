@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7787358d60ee5c46b07e3a2c71e74af, type: 3}
+  m_Name: Roasted Marshmallow
+  m_EditorClassIdentifier: 
+  name: Roasted Marshmallow
+  result: {fileID: 11400000, guid: ddf328693dd1f0a41820cb2a2e15e9cc, type: 2}
+  ingredient: {fileID: 11400000, guid: 01abed08cb766054b9eac9401b48a2bf, type: 2}
+  cookingTime: 2
