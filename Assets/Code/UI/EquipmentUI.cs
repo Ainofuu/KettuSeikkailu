@@ -9,28 +9,36 @@ public class EquipmentUI : MonoBehaviour
 
     Equipment[] currentEquipment;
 
-    InventorySlot[] slots;
-
-    // Start is called before the first frame update
+    EquipSlot[] slots;
+    
     void Start()
     {
-        currentEquipment = EquipmentManager.instance.GetCurrentEquipment();
-    }
+        EquipmentManager.instance.onEquipmentChanged += UpdateUI;
 
-    // Update is called once per frame
+        currentEquipment = EquipmentManager.instance.GetCurrentEquipment();
+        slots = itemsParent.GetComponentsInChildren<EquipSlot>();
+    }
+    
     void Update()
     {
         if (Input.GetButtonDown("Equipment"))
         {
-
+            equipmentUI.SetActive(!equipmentUI.activeSelf);
         }
     }
 
-    void UpdateUI()
+    void UpdateUI(Equipment newEquip, Equipment oldEquip)
     {
         for (int i = 0; i < currentEquipment.Length; i++)
         {
-
+            if (currentEquipment[i] != null)
+            {
+                slots[i].AddItem(currentEquipment[i]);
+            }
+            else
+            {
+                slots[i].ClearSlot();
+            }
         }
     }
 }

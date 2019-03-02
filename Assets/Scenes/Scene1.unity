@@ -25163,8 +25163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff1db397c1b00649892b3ea7ea7cbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsParent: {fileID: 0}
-  equipmentUI: {fileID: 0}
+  itemsParent: {fileID: 539121919}
+  equipmentUI: {fileID: 160110599}
 --- !u!1 &1191663024
 GameObject:
   m_ObjectHideFlags: 0
@@ -26591,11 +26591,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6971608407092631338, guid: 98a58d75684b1ec44bb897ed632e3bfc,
-        type: 3}
-      propertyPath: m_inputSource
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6971608407092631338, guid: 98a58d75684b1ec44bb897ed632e3bfc,
         type: 3}

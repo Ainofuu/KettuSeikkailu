@@ -821,8 +821,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnClickItemSlot
+      - m_Target: {fileID: 753282262816135543}
+        m_MethodName: OnClickEquipSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -917,6 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9209372104687857793}
+  - component: {fileID: 753282262816135543}
   - component: {fileID: 1470255002}
   m_Layer: 5
   m_Name: Equipment Slot
@@ -948,6 +949,22 @@ RectTransform:
   m_AnchoredPosition: {x: -113.599976, y: 134.04999}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &753282262816135543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209372104687857792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07ea06e852d34544998d8acccd599a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 9209372104671561019}
+  namePopup: {fileID: 7257396957290837330}
+  damageValue: {fileID: 6971608407092631338}
+  armorValue: {fileID: 2702934836076268644}
 --- !u!114 &1470255002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,7 +982,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 753282262816135543}
           m_MethodName: OnMouseEnterInvSlot
           m_Mode: 1
           m_Arguments:
@@ -982,7 +999,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 753282262816135543}
           m_MethodName: OnMouseExitInvSlot
           m_Mode: 1
           m_Arguments:
