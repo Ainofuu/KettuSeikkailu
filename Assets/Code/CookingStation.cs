@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CookingStation : Interactable
 {
+    Fire fire;
+
     public override void Interact()
     {
         base.Interact();
 
         Cook();
+        StartCoroutine(LightFire());
     }
 
     void Cook()
     {
         // Get the current item the player has equiped in WEAPON slot. This needs to be a bit more elegant in the future.
         Item ingredient = EquipmentManager.instance.GetCurrentEquipment(EquipmentSlot.Weapon);
+
+        if (ingredient == null)
+            return;
 
         CookingRecipe recipe = CookingManager.instane.GetRecipe(ingredient);
 
@@ -35,5 +41,19 @@ public class CookingStation : Interactable
     {
         yield return new WaitForSeconds(duration);
         Inventory.instance.Add(result);
+    }
+    
+    IEnumerator LightFire()
+    {
+        fire = GetComponent<Fire>();
+        if (fire != null)
+        {
+            fire.LightFire();
+            while (isFocus)
+            {
+                yield return null;
+            }
+            fire.TurnOffFire();
+        }
     }
 }

@@ -18,6 +18,9 @@ public class EquipmentManager : MonoBehaviour
         }
 
         instance = this;
+
+        int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+        currentEquipment = new Equipment[numberOfSlots];
     }
 
     #endregion
@@ -32,8 +35,7 @@ public class EquipmentManager : MonoBehaviour
     {
         inventory = Inventory.instance;
 
-        int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-        currentEquipment = new Equipment[numberOfSlots];
+        
     }
 
     public void Equip(Equipment newItem)
